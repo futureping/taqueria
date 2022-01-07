@@ -66,4 +66,5 @@ jobs:
             });
           debug: true
 
-      - run: echo "${{steps.getaArtifact.outputs.result.artifacts[0].archive_download_url}}"
+      # - run: echo "${{steps.getaArtifact.outputs.result.artifacts[0].archive_download_url}}"
+      - run: echo "${{steps.getaArtifact.outputs.result}}"
