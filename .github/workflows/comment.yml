@@ -3,7 +3,7 @@ name: Comment link on PR
 on:
   workflow_run:
     workflows: ['upload-artifact']
-    types: [completed]
+    type: [completed]
 
 jobs: 
   artifact-comment:
