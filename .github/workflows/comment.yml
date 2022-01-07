@@ -2,7 +2,7 @@ name: Comment link on PR
 
 on:
   workflow_run:
-    workflows: ['Taqueria build and upload']
+    workflows: ['upload-artifact']
     types: [completed]
 
 jobs: 

@@ -1,4 +1,4 @@
-name: Taqueria build and upload
+name: upload-artifact
 
 on:
   push:
