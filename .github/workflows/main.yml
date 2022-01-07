@@ -65,6 +65,8 @@ jobs:
 
   artifact-comment:
 
+    needs: build_taqueria
+
     steps:
 
       - name: Get artifact for Repo
