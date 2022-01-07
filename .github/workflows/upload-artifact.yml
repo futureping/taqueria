@@ -23,3 +23,19 @@ jobs:
           name: taqueria
           path: ./test.txt
           retention-days: 1
+
+      - name: Get artifact from previous workflow
+        uses: actions/github-script@v5
+        id: getArtifact
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const run_id = 1669239715;
+            const {owner, repo} = context.repo;
+
+            github.rest.actions.listWorkflowRunArtifacts, {owner, repo, run_id});
+            for (const artifact of artifacts) {
+              console.log(artifact.name)
+              console.log(artifact.id)
+            }
+          debug: true
