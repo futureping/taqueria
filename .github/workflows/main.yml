@@ -59,6 +59,7 @@ jobs:
         with:
           name: taqueria
           path: /home/runner/work/taqueria/taqueria/taqueria
+          retention-days: 1
 
   artifact-comment:
 
