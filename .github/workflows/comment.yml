@@ -2,8 +2,9 @@ name: Comment link on PR
 
 on:
   workflow_run:
-    workflows: ['upload-artifact']
-    type: [completed]
+    workflows: ["upload-artifact"]
+    branches: [gino-github-action-init]
+    types: [completed]
 
 jobs: 
   artifact-comment:
