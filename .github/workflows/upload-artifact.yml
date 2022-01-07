@@ -34,13 +34,16 @@ jobs:
             const {owner, repo} = context.repo;
             const artifacts = await github.paginate(
               github.rest.actions.listWorkflowRunArtifacts, {owner, repo, run_id});
+            const workflow_run = await github.paginate(
+              github.rest.actions.getWorkflowRun, {owner, repo, run_id});
             let body = `Download the artifacts for this pull request:\n`;
             for (const artifact of artifacts) {
               console.log(artifact.name)
               console.log(artifact.id)
-              body += `\n* [${artifact.name}.zip](https://github.com/${owner}/${repo}/actions/artifacts/${artifact.id}.zip)`;
+              body += `\n* [${artifact.name}.zip](https://github.com/${owner}/${repo}/suites/${worflow_run.check_suite_id}/artifacts/${artifact.id})`;
             }
             core.info("Review thread message body:", body);
             console.log(body)
+            console.log(workflow_run)
 
           debug: true
