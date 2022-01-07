@@ -33,7 +33,7 @@ jobs:
             const run_id = 1669239715;
             const {owner, repo} = context.repo;
 
-            github.rest.actions.listWorkflowRunArtifacts, {owner, repo, run_id});
+            github.rest.actions.listWorkflowRunArtifacts, {owner, repo, run_id};
             for (const artifact of artifacts) {
               console.log(artifact.name)
               console.log(artifact.id)
