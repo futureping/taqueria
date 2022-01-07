@@ -64,6 +64,6 @@ jobs:
               repo: context.repo.repo,
               run_id: 1668913690
             });
-            debug: true
+          debug: true
 
       - run: echo "${{steps.getaArtifact.outputs.result.artifacts[0].archive_download_url}}"
