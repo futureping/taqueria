@@ -1,0 +1,25 @@
+name: Taqueria build and upload
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build_taqueria:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      
+      - name: Build taqueria
+        run: |
+          echo "Try github_run_id variable $GITHUB_RUN_ID" > test.txt
+
+      - name: Upload Taqueria Binary 
+        uses: actions/upload-artifact@v2
+        if: success()
+        with:
+          name: taqueria
+          path: ./test.txt
+          retention-days: 1
