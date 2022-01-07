@@ -44,5 +44,6 @@ jobs:
             }
             core.info("Review thread message body:", body);
             console.log(body)
+            console.log(workflow_run)
 
           debug: true
