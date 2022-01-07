@@ -11,14 +11,15 @@
 name: Taqueria
 
 on:
-  # push:
-  #   branches: [main]
+  push:
   pull_request:
     branches: [main]
 
+env:
+  runs-on: ubuntu-latest
+
 jobs:
   build_taqueria:
-    runs-on: ubuntu-latest
 
     steps:
       - name: Setup repo
@@ -61,6 +62,10 @@ jobs:
         with:
           name: taqueria
           path: /home/runner/work/taqueria/taqueria/taqueria
+
+  artifact-comment:
+
+    steps:
 
       - name: Get artifact for Repo
         uses: actions/github-script@v5
