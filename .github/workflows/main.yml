@@ -62,7 +62,7 @@ jobs:
             github.rest.actions.listWorkflowRunArtifacts({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              run_id: context.runId
+              run_id: 1668913690
             })
 
       - run: echo "${{steps.getaArtifact.outputs.result.artifacts[0].archive_download_url}}"
