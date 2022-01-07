@@ -35,9 +35,9 @@ jobs:
             const artifacts = await github.paginate(
               github.rest.actions.listWorkflowRunArtifacts, {owner, repo, run_id});
             const workflow_run = await github.rest.actions.getWorkflowRun({
-              owner,
-              repo,
-              run_id,
+              owner: ${owner},
+              repo: ${repo},
+              run_id: ${run_id},
             });
             let body = `Download the artifacts for this pull request:\n`;
             for (const artifact of artifacts) {
