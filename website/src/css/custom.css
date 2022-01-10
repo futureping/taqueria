@@ -276,3 +276,27 @@ html[data-theme="light"] .docusaurus-highlight-code-line {
 		margin-left: 0px;
 	}
 }
+
+div.col h1 {
+  color: #454545;
+}
+
+div.col h2 {
+  color: #454545;
+}
+
+div.col p {
+  color: #454545;
+}
+
+.pagination-nav__sublabel {
+  display: none;
+}
+
+a.pagination-nav__link {
+  border: none;
+}
+
+.pagination-nav__label {
+  color: #454545;
+}
