@@ -44,6 +44,7 @@ const config = {
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
 			navbar: {
+				hideOnScroll: true,
 				logo: {
 					alt: "Tezos Taqueria Logo",
 					src: "img/logoSVG.svg",
