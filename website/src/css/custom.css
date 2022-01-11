@@ -203,6 +203,7 @@ html[data-theme="light"] .docusaurus-highlight-code-line {
 }
 .footerButton:hover {
 	color: #373f41;
+	text-decoration: none;
 }
 
 .footerForm {
