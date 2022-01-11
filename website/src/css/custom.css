@@ -5,7 +5,6 @@
  */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
 /* You can override the default Infima variables here. */
-
 :root {
 	--ifm-color-primary: #fcaf17;
 	--ifm-color-primary-dark: rgb(33, 175, 144);
