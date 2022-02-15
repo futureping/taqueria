@@ -44,10 +44,10 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			// gtag: {
-			// 	trackingID: "G-2VB2D1DHC0",
-			// 	anonymizeIP: true,
-			// },
+			gtag: {
+				trackingID: "303602454",
+				anonymizeIP: true,
+			},
 			colorMode: {
 				defaultMode: "light",
 				disableSwitch: true,
